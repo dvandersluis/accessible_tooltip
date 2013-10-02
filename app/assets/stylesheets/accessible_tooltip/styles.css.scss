@@ -1,0 +1,114 @@
+.accessible_tooltip {
+  a {
+    color: #000000;
+    font-weight: normal;
+    outline: none;
+    cursor: help;
+    text-decoration: none;
+    position: relative;
+    padding: auto;
+
+    &:hover, &:focus {
+      color: #000000;
+      text-decoration: none;
+
+      // Make the span visible
+      & > span.tooltip {
+        overflow: visible;
+        left: 1em;
+        top: 2em;
+        z-index: 99;
+        height: auto;
+        width: 250px;
+        padding: 0.5em 0.8em 0.8em 2em;
+        border-width: 1px;
+        border-style: solid;
+        // Clipping values will need to be adjusted if the large icon is moved
+        // clip: auto - Does not work properly in IE < 9 with negative positioning
+        clip: rect(-10px auto auto -55px);
+        clip: rect(-10px, auto, auto, -55px);
+      }
+    }
+
+    &:focus img.small-icon {
+      outline: 1px dashed #999;
+    }
+
+    & > span.tooltip {
+      @include border-radius(5px, 5px);
+      @include single-box-shadow(rgba(0, 0, 0, 0.1), 5px, 5px, 5px);
+      position: absolute;
+      font-weight: normal;
+      font-size: 12px;
+      color: #000000;
+      cursor: auto;
+    }
+
+    span.label {
+      border-bottom: 1px dotted #000000;
+      margin-right: 4px;
+    }
+
+    img.small-icon {
+      padding: 1px;
+      position: relative;
+      top: -2px;
+      border: 0;
+    }
+  }
+
+  ul {
+    margin-left: 1em;
+    margin-top: 10px;
+    padding: 0;
+  }
+
+  img.icon {
+    height: 48px;
+    width: 48px;
+    border: 0;
+    top: -5px;
+    left: -30px;
+    float: left;
+    position: absolute;
+  }
+
+  em {
+    font-size: 14px;
+    font-weight: bold;
+    display: block;
+    padding: 0.2em 0 0.6em 0;
+  }
+
+  * html a:hover { background: transparent; }
+  .classic {
+    padding: 0.8em 1em;
+    background: #FFFFAA;
+    border: 1px solid #FFAD33;
+  }
+  .critical { background: #FFCCAA; border-color: #FF3334; }
+  .help, .info { background: #9FDAEE; border-color: #2BB0D7; }
+  .warning { background: #FFFFAA; border-color: #FFAD33; }
+
+  &.left
+  {
+    a
+    {
+      &:hover, &:focus
+      {
+        img.icon
+        {
+          left:  auto;
+          right: -30px;
+        }
+
+        & > span.tooltip {
+          left: -230px;
+          padding: 0.5em 2em 0.8em 0.8em;
+          clip: rect(-10px 315px auto -55px);
+          clip: rect(-10px, 315px, auto, -55px);
+        }
+      }
+    }
+  }
+}

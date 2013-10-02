@@ -1,6 +1,6 @@
 # AccessibleTooltip
 
-TODO: Write a gem description
+Rails helper for creating a balloon style tooltip that is WCAG compliant.
 
 ## Installation
 
@@ -18,7 +18,9 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+    <%= accessible_tooltip(:help, label: "Help Me", title: "Dogs & Foxes") do>
+      The quick brown fox jumped over the lazy dog.
+    <% end %>
 
 ## Contributing
 
