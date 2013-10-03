@@ -9,7 +9,7 @@ Gem::Specification.new do |gem|
   gem.authors       = ["Daniel Vandersluis"]
   gem.email         = ["dvandersluis@selfmgmt.com"]
   gem.description   = %q{WCAG compliant balloon-style tooltip helper for Rails}
-  gem.summary       = %q{WCAG compliant balloon-style tooltip helper for Rails}
+  gem.summary       = %q{Accessible tooltip helper for Rails}
   gem.homepage      = "https://github.com/dvandersluis/accessible_tooltip"
 
   gem.files         = `git ls-files`.split($/)

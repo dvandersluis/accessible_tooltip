@@ -8,6 +8,18 @@
     position: relative;
     padding: auto;
 
+    // Hide the tooltip when not hovered or focused
+    & > span.tooltip {
+      border-style: none;
+      clip: rect(0 0 0 0); // IE6, IE7
+      clip: rect(0, 0, 0, 0);
+      width: 1px;
+      margin: -1px;
+      overflow: hidden;
+      padding: 0;
+      position: absolute;
+    }
+
     &:hover, &:focus {
       color: #000000;
       text-decoration: none;
