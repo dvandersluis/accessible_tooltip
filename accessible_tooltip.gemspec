@@ -11,6 +11,7 @@ Gem::Specification.new do |gem|
   gem.description   = %q{WCAG compliant balloon-style tooltip helper for Rails}
   gem.summary       = %q{Accessible tooltip helper for Rails}
   gem.homepage      = "https://github.com/dvandersluis/accessible_tooltip"
+  gem.license       = 'MIT'
 
   gem.files         = `git ls-files`.split($/)
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
