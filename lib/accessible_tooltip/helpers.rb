@@ -38,7 +38,7 @@ module AccessibleTooltip
           out << image_tag("tooltip_#{type}_small.png", alt: t(:tooltip_help), style: 'vertical-align: middle;', class: "small-icon") if options.fetch(:icon, true)
           out << content_tag(:span, class: "custom #{type} tooltip") do
             popup = ActiveSupport::SafeBuffer.new
-            popup << image_tag("tooltip_#{type}.png", alt: t(tooltip), class: "icon")
+            popup << image_tag("tooltip_#{type}.png", alt: t(tooltip), class: "tooltip-icon")
             popup << content_tag(:em, title) unless title.blank?
 
             if block_given?

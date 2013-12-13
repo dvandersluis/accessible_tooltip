@@ -76,7 +76,7 @@
     padding: 0;
   }
 
-  img.icon {
+  img.tooltip-icon {
     height: 48px;
     width: 48px;
     border: 0;
@@ -109,7 +109,7 @@
     {
       &:hover, &:focus
       {
-        img.icon
+        img.tooltip-icon
         {
           left:  auto;
           right: -30px;
