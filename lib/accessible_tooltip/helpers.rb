@@ -10,8 +10,8 @@ module AccessibleTooltip
       raise ArgumentError, "type must be one of #{types.join(", ")}" unless types.include?(type)
 
       if args.first.is_a? Hash
-        element = :span
         options = args.shift || {}
+        element = options.fetch(:element, :span)
       else
         element = args.shift.andand.to_sym || :span
         options = args.shift || {}
@@ -26,7 +26,7 @@ module AccessibleTooltip
       container_class = ["accessible_tooltip"]
       container_class << "left" if position == :left
 
-      content_tag(:span, class: container_class.join(" ")) do
+      content_tag(element, class: container_class.join(" ")) do
         link_to options.fetch(:url, "#"), link_options do
 
           title = t(title) if title.is_a?(Symbol)
