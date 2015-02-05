@@ -26,7 +26,7 @@ module AccessibleTooltip
       container_class = ["accessible_tooltip"]
       container_class << "left" if position == :left
 
-      content_tag(element, class: container_class.join(" ")) do
+      content_tag(element, html_options.merge(class: container_class.join(" "))) do
         link_to options.fetch(:url, "#"), link_options do
 
           title = t(title) if title.is_a?(Symbol)
