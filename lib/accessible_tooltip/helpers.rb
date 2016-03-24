@@ -13,7 +13,7 @@ module AccessibleTooltip
         options = args.shift || {}
         element = options.fetch(:element, :span)
       else
-        element = args.shift.andand.to_sym || :span
+        element = args.shift ? args.shift.to_sym : :span
         options = args.shift || {}
       end
 
