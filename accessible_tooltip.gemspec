@@ -20,4 +20,5 @@ Gem::Specification.new do |gem|
 
   gem.add_dependency 'rails', '>= 3.0.0'
   gem.add_dependency 'sass-rails', '>= 3.0.0'
+  gem.add_dependency 'compass-rails', '>= 3.0.0'
 end
